@@ -36,5 +36,15 @@ public class MinStack {
         return min;
     }
 
+    public static void main(String[] args){
+
+        MinStack ms = new MinStack();
+        ms.push(10);
+        ms.pop();
+
+        System.out.println(ms.getMin());
+
+    }
+
 
 }
