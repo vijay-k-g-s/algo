@@ -1,5 +1,20 @@
 package graph;
 
+// Cycle Detection in a Directed Graph using DFS (3-color / recStack approach).
+//   In a directed graph, a cycle exists when DFS finds a back edge — i.e., a
+//   neighbor that is currently on the active recursion stack (GRAY state).
+// Example: Graph 1: 0→1→2→3 (no cycle)  → false
+//          Graph 2: 0→1→2→0 (cycle)      → true
+// Approach: DFS with two sets — `visited` and `recStack`.
+//   visited:  all nodes ever explored (WHITE → BLACK).
+//   recStack: nodes on the current DFS path (GRAY = in progress).
+//   If a neighbor is in recStack, a back edge is found → cycle.
+//   Remove node from recStack when backtracking.
+//   Run from every unvisited node to handle disconnected graphs.
+// Time: O(V + E), Space: O(V)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 public class CycleDetectionDirected {

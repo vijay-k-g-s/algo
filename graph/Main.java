@@ -1,5 +1,11 @@
 package graph;
 
+// Scratch / Playground — graph package experiments.
+//   Contains early Dijkstra prototype (dijalgo) and buildGraphFromMatrix utility.
+//   Not a standalone problem solution — used for quick manual testing.
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 public class Main {

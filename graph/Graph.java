@@ -1,5 +1,13 @@
 package graph;
 
+// Utility: Undirected Graph — adjacency list representation.
+//   addEdge(u, v) adds both u→v and v→u (undirected).
+//   getConnectedNodes(u) returns all neighbors of u.
+//   Node IDs are arbitrary integers; the map auto-initializes on first edge.
+// Used by: BFS, DFS, CycleDetection (undirected), NumberOfIslands, NumberOfProvinces, etc.
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 class Graph {

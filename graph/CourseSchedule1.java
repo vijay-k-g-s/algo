@@ -1,5 +1,21 @@
 package graph;
 
+// Problem (LC 207): There are numCourses courses (0 to numCourses-1).
+//          prerequisites[i] = [a, b] means you must take b before a.
+//          Return true if it is possible to finish all courses (no cycle exists).
+// Example: numCourses = 2, prerequisites = [[1, 0]]
+//          Output: true  (take 0 then 1)
+//          numCourses = 2, prerequisites = [[1, 0], [0, 1]]
+//          Output: false  (cycle: 0 requires 1 and 1 requires 0)
+// Approach: Kahn's Algorithm (BFS Topological Sort).
+//   Build a directed graph where b → a means b is prerequisite of a.
+//   Compute in-degree for each node. Enqueue all nodes with in-degree 0.
+//   BFS: poll a node, decrement neighbors' in-degrees; if in-degree hits 0, enqueue.
+//   If visited count == numCourses, no cycle → all courses can be finished.
+// Time: O(V + E), Space: O(V + E)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 public class CourseSchedule1 {

@@ -1,5 +1,19 @@
 package graph;
 
+// Topological Sort — DFS Post-Order (using a Stack).
+//   A topological ordering of a DAG ensures that for every edge u→v, u comes
+//   before v. DFS post-order naturally produces reverse topological order:
+//   a node is pushed to the stack only AFTER all its descendants are processed.
+// Example: Edges: 5→2, 5→0, 4→0, 4→1, 2→3, 3→1
+//          Valid order: [5, 4, 2, 3, 1, 0]  (or any valid linearization)
+// Approach: DFS on every unvisited node.
+//   After fully exploring a node's subtree (post-order), push it onto a stack.
+//   Final result = stack popped in LIFO order = topological order.
+//   A node pushed later in DFS means all its dependencies were already pushed first.
+// Time: O(V + E), Space: O(V) stack + recursion
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 public class TopologicalSortDFS {

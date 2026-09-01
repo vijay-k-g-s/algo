@@ -1,5 +1,19 @@
 package graph;
 
+// Cycle Detection in an Undirected Graph using DFS.
+//   In an undirected graph, a cycle exists when DFS reaches an already-visited
+//   neighbor that is NOT the direct parent of the current node (a back edge).
+// Example: Graph 1: 0-1-2-3-4 (no cycle) → false
+//          Graph 2: 0-1-2-0   (cycle)     → true
+// Approach: DFS with a `parent` parameter.
+//   For each neighbor of the current node:
+//     - If unvisited: recurse. If that returns true, a cycle was found.
+//     - If visited AND not the parent: back edge detected → cycle exists.
+//   Run from every unvisited node to handle disconnected graphs.
+// Time: O(V + E), Space: O(V) recursion stack
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 public class CycleDetectionDFSUndirected {

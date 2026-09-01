@@ -1,5 +1,13 @@
 package graph;
 
+// Utility: Directed Graph — adjacency list representation.
+//   addEdge(u, v) adds only u→v (directed; no reverse edge).
+//   getConnectedNodes(u) returns all outgoing neighbors of u.
+//   Node IDs are arbitrary integers; the map auto-initializes on first edge.
+// Used by: TopologicalSort, CourseSchedule, CycleDetectionDirected, AlienDictionary.
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 class DirectedGraph {

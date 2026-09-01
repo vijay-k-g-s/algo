@@ -1,8 +1,22 @@
 package graph;
 
+// Topological Sort — Kahn's Algorithm (BFS).
+//   A topological ordering of a Directed Acyclic Graph (DAG) is a linear ordering
+//   of nodes such that for every directed edge u→v, u appears before v.
+// Example: Edges: 5→2, 5→0, 4→0, 4→1, 2→3, 3→1
+//          Valid order: [5, 4, 2, 0, 3, 1]  (or any valid linearization)
+// Approach: Kahn's BFS — process nodes with no prerequisites first.
+//   1. Compute in-degree for every node.
+//   2. Enqueue all nodes with in-degree 0 (no dependencies).
+//   3. Poll a node → add to result; for each neighbor decrement its in-degree.
+//      If neighbor's in-degree reaches 0, enqueue it.
+//   4. If result.size() < V, a cycle exists (used in CourseSchedule1 for detection).
+// Time: O(V + E), Space: O(V + E)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
-// Course Schedule 2
 public class TopologicalSortBFS {
 
     List<Integer> topologicalSort(DirectedGraph g) {

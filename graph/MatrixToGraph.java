@@ -1,5 +1,19 @@
 package graph;
 
+// Utility: Convert an Adjacency Matrix to an undirected Graph (adjacency list).
+//   matrix[i][j] = 1 means node i and node j are connected.
+//   The matrix is symmetric (undirected), so only the upper triangle is processed.
+//   Node IDs are 0-indexed row/column numbers.
+// Example: matrix = [[1,1,0],    →  0 → [1]
+//                    [1,1,0],    →  1 → [0]
+//                    [0,0,1]]    →  2 → []
+// Approach: Iterate i from 0..n-1, j from i+1..n-1 (upper triangle only).
+//   If matrix[i][j] == 1, call g.addEdge(i, j) which adds both directions.
+// Used by: NumberOfProvinces (isConnected matrix input).
+// Time: O(n²), Space: O(n + E)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.ArrayList;
 
 /* matrix = {

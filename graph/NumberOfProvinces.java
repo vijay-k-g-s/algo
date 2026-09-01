@@ -1,9 +1,22 @@
 package graph;
 
+// Problem (LC 547): There are n cities. isConnected[i][j] = 1 means city i and
+//          city j are directly connected. A province is a group of directly or
+//          indirectly connected cities. Return the total number of provinces.
+// Example: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
+//          Output: 2  (cities 0 & 1 form one province; city 2 is its own)
+//          isConnected = [[1,0,0],[0,1,0],[0,0,1]]
+//          Output: 3  (no connections — each city is its own province)
+// Approach: Convert the adjacency matrix to a Graph, then count connected
+//   components via DFS. Each DFS call from an unvisited node discovers one
+//   full province. Similar to NumberOfIslands but on an adjacency matrix.
+// Time: O(n²), Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.HashSet;
 import java.util.Set;
 
-// LeetCode 547. Number of Provinces
 public class NumberOfProvinces {
 
     private Graph buildGraph(int[][] isConnected) {

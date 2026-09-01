@@ -1,5 +1,20 @@
 package graph;
 
+// DFS on a Disconnected (Multi-Component) Graph.
+//   A single DFS from one start node only visits its connected component.
+//   To visit ALL nodes in a graph that may have multiple disconnected components,
+//   iterate over every node and start a fresh DFS for each unvisited one.
+// Example: 7 nodes — components: {0,1,2,3}, {4,5}, {6}
+//          Output:
+//            Component: 0 1 3 2
+//            Component: 4 5
+//            Component: 6
+// Approach: For each unvisited node, call dfsHelper() recursively. The shared
+//   `visited` set ensures each node is processed exactly once across all DFS calls.
+// Time: O(V + E), Space: O(V) recursion stack
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 public class DFSDisconnected {
