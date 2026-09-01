@@ -1,3 +1,10 @@
+// Utility (commented out): Convert a binary tree into an undirected Graph.
+//   Each tree node becomes a graph node. Parent-child edges become bidirectional.
+//   Useful for problems that need to traverse a tree as a general graph
+//   (e.g., find distance between two nodes, all paths from any node).
+// Approach: DFS from root. For each node, add bidirectional edge to parent.
+//   Use a Map<TreeNode, List<TreeNode>> as the adjacency list.
+//
 //package utilities;
 //
 //public class TreeToGraph {

@@ -1,3 +1,7 @@
+// Playground / Scratch: Early experiments with frequency counting using a HashMap.
+//   Counts occurrences of each integer, rebuilds a list expanding duplicates,
+//   and attempts a sort. Kept for reference — not a complete solution.
+//
 //package playground;
 //
 //import java.util.ArrayList;

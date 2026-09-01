@@ -1,5 +1,20 @@
-
 package utilities;
+
+// Utility: Generate all concatenations of word permutations.
+//   Given an array of words, produce every permutation of the words and
+//   concatenate each permutation into a single string.
+// Example: words = ["foo", "bar"]
+//          Permutations: ["foo","bar"] and ["bar","foo"]
+//          Output: ["foobar", "barfoo"]
+//          words = ["a", "b", "c"]
+//          Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+// Approach: Backtracking permutation via in-place swapping (no extra visited array).
+//   At each index `start`, swap words[start] with every words[i] (i >= start),
+//   recurse for start+1, then swap back (restore).
+// Time: O(n! * n), Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

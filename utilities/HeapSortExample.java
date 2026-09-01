@@ -1,4 +1,17 @@
 package utilities;
+
+// Utility: Demonstrates PriorityQueue with custom Comparators on objects.
+//   PriorityQueue is a min-heap by default; supplying a Comparator changes the ordering.
+//   Two Comparators shown:
+//     AgeComparator  — orders Customer objects by age ascending.
+//     NameComparator — orders Customer objects by name lexicographically.
+// Key idiom: new PriorityQueue<>(new MyComparator())
+//   or lambda: new PriorityQueue<>((a, b) -> a.age - b.age)
+// Output: Sorted by age: Bob(25) Alice(30) Charlie(35)
+//         Sorted by name: Alice Bob Charlie
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 // Define Customer class with name and age attributes

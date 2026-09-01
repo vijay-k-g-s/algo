@@ -1,5 +1,17 @@
-
 package utilities;
+
+// Utility: Demonstrates TreeMap — a sorted map backed by a Red-Black Tree.
+//   Keys are always maintained in natural (ascending) order.
+//   Operations: put, get, keySet (returns keys in sorted order).
+// Key difference from HashMap:
+//   HashMap  → O(1) average, unordered.
+//   TreeMap  → O(log n) guaranteed, always sorted by key.
+// Use TreeMap when you need ordered iteration or range queries (firstKey, lastKey, etc.).
+// Example: put("Bob",30), put("Alice",25), put("Charlie",22)
+//          keySet() → [Alice, Bob, Charlie]  (alphabetical)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.TreeMap;
 
 public class TreeMapExample {

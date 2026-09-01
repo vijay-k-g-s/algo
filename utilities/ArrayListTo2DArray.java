@@ -1,4 +1,14 @@
 package utilities;
+
+// Utility: Convert List<List<Integer>> → Integer[][] (2D array).
+// Example: [[1,2,3],[4,5,6],[7,8,9]]  →  Integer[3][3] with same values
+// Idiom: array[i] = subList.toArray(new Integer[0])
+//   The `new Integer[0]` hint tells toArray the target element type.
+//   Java infers the correct size — passing length 0 is idiomatic and efficient.
+// Note: result is Integer[][] (boxed), not int[][] (primitive).
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.ArrayList;
 import java.util.List;
 

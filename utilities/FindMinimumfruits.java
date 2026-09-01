@@ -1,5 +1,18 @@
 package utilities;
 
+// Utility / Scratch: Toggle-set technique — track elements that appear an odd
+//   number of times using a HashSet.
+//   If element is already in set → remove it (second occurrence cancels first).
+//   If element is not in set   → add it (first / odd occurrence).
+//   After processing, set contains only elements with an odd count.
+// Example: arr = [3, 3, 3, 1]
+//          After 3 (odd count): set = {3}
+//          After 3 again (even): set = {}... after third 3: set = {3}
+//          After 1: set = {3, 1}
+// Note: This is an exploratory scratch — not a complete solution.
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.HashSet;
 import java.util.Set;
 

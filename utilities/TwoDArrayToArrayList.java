@@ -1,4 +1,13 @@
 package utilities;
+
+// Utility: Convert Integer[][] (2D array) → List<List<Integer>>.
+// Example: {{1,2,3},{4,5,6},{7,8,9}}  →  [[1,2,3],[4,5,6],[7,8,9]]
+// Idiom: new ArrayList<>(Arrays.asList(subArray))
+//   Arrays.asList wraps the sub-array in a fixed-size List;
+//   wrapping in ArrayList makes it mutable and resizable.
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
