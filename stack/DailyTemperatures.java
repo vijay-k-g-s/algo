@@ -1,5 +1,19 @@
 package stack;
 
+// Problem (LC 739): Given an array of daily temperatures, return an array where
+//          output[i] = number of days you have to wait after day i for a warmer
+//          temperature. If no future warmer day exists, output[i] = 0.
+// Example: temps = [73, 74, 75, 71, 69, 72, 76, 73]
+//          Output: [1, 1, 4, 2, 1, 1, 0, 0]
+//          temps = [30, 60, 90] → [1, 1, 0]
+// Approach: Monotonic decreasing stack of INDICES (not values).
+//   Scan left→right. When temps[i] > temps[stack.peek()], that waiting index
+//   has found its warmer day: result[top] = i - top. Pop and repeat.
+//   Indices remaining in stack at the end have no warmer future day → stay 0.
+// Time: O(n), Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.Stack;
 

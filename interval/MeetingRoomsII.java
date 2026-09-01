@@ -1,5 +1,21 @@
 package interval;
 
+// Problem (LC 253): Given an array of meeting time intervals [start, end],
+//          find the minimum number of conference rooms required so that no two
+//          overlapping meetings share the same room.
+// Example: intervals = [[0,30],[5,10],[15,20]]
+//          Output: 2
+//          [0,30] overlaps with [5,10]; [15,20] can reuse the room freed by [5,10].
+//          intervals = [[7,10],[2,4]]
+//          Output: 1  (no overlap)
+// Approach: Sort by start time. Use a min-heap of end times (one entry per room).
+//   For each meeting, check if the earliest-ending room (heap min) is free
+//   (current start >= earliest end). If yes, reuse that room (update its end).
+//   If no, allocate a new room. Heap size at the end = rooms needed.
+// Time: O(n log n), Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.*;
 
 class Interval {

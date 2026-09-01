@@ -1,5 +1,18 @@
 package stack;
 
+// Problem: For each element in an array, find the nearest element to its RIGHT
+//          that is strictly greater. Return -1 if none exists.
+// Example: arr = [4, 5, 2, 25, 7, 8]
+//          Output: [5, 25, 25, -1, 8, -1]
+//          Explanation: 4→5, 5→25, 2→25, 25→none, 7→8, 8→none
+// Approach: Monotonic decreasing stack of VALUES (scan right→left).
+//   Before pushing arr[i], pop all elements ≤ arr[i].
+//   Stack top after pops = nearest greater to the right.
+//   Push arr[i] and move on.
+// Time: O(n), Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.Stack;
 

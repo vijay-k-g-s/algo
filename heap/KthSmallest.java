@@ -1,5 +1,18 @@
 package heap;
 
+// Problem: Given an unsorted integer array, find the kth smallest element (1-indexed).
+// Example: nums = [7, 10, 4, 3, 20, 15], k = 3
+//          Sorted: [3, 4, 7, 10, 15, 20] → 3rd smallest = 7
+//          nums = [7, 10, 4, 3, 20, 15], k = 4 → 10
+// Approach 1: Max-Heap of size k — keep k smallest seen so far.
+//   If size > k, evict the largest. Heap top = kth smallest.
+//   Time: O(n log k), Space: O(k)
+// Approach 2: QuickSelect — partition so index k-1 holds the kth smallest.
+//   Return nums[p] when p == target (= k-1).
+//   Time: O(n) average, Space: O(1)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.PriorityQueue;
 import java.util.Collections;
 

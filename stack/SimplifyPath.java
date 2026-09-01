@@ -1,5 +1,23 @@
 package stack;
 
+// Problem (LC 71): Given a Unix-style absolute file path, return its simplified
+//          (canonical) form. Rules:
+//          - "."  means current directory — skip it.
+//          - ".." means parent directory  — go up one level (pop).
+//          - Multiple slashes "//" → treat as single "/".
+//          - Result must start with "/" and not end with "/" (unless root).
+// Example: "/a/./b/../../c/"  → "/c"
+//          "/home//foo/"      → "/home/foo"
+//          "/../"             → "/"   (can't go above root)
+//          "/home/user/Documents/../Pictures" → "/home/user/Pictures"
+// Approach: Split path by "/", process each component.
+//   Use a Deque as a stack of directory names.
+//   Skip "" and ".". For ".." pop top if non-empty. Otherwise push the name.
+//   Reconstruct by joining deque contents with "/" prefix.
+// Time: O(n), Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Deque;
 import java.util.LinkedList;
 

@@ -1,5 +1,23 @@
 package stack;
 
+// Problem (LC 85): Given a binary matrix of '0's and '1's, find the area of
+//          the largest rectangle containing only '1's.
+// Example: matrix = [["1","0","1","0","0"],
+//                    ["1","0","1","1","1"],
+//                    ["1","1","1","1","1"],
+//                    ["1","0","0","1","0"]]
+//          Output: 6  (3 columns × 2 rows in the middle-right region)
+//          matrix = [["0"]] → 0,  matrix = [["1"]] → 1
+// Approach: Reduce to LargestRectangleInHistogram row by row.
+//   heights[j] = consecutive 1's ending at matrix[i][j] in column j.
+//   If matrix[i][j] == '0': heights[j] = 0 (break in column).
+//   If matrix[i][j] == '1': heights[j] += 1 (extend column streak).
+//   Run NSL + NSR histogram algorithm on each row's heights array.
+//   Answer = max area seen across all rows.
+// Time: O(rows × cols), Space: O(cols)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Stack;
 
 public class MaximalRectangle {

@@ -1,5 +1,22 @@
 package stack;
 
+// Problem (LC 42): Given an elevation map as an integer array where each value
+//          represents the height of a bar of width 1, compute how much water
+//          it can trap after raining.
+// Example: height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+//          Output: 6
+//          height = [4, 2, 0, 3, 2, 5]
+//          Output: 9
+// Key insight: Water above bar i = min(leftWall[i], rightWall[i]) - height[i]
+//   where leftWall[i] = max height to the left, rightWall[i] = max to the right.
+// Approach 1: Precompute leftMax[] and rightMax[] arrays — O(n) time, O(n) space
+// Approach 2: Stack — detect valleys on the fly using monotonic non-increasing
+//             stack; compute trapped water per valley — O(n) time, O(n) space
+// Approach 3: Two pointers — process left/right inward based on which wall is
+//             shorter — O(n) time, O(1) space
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.Stack;
 

@@ -1,5 +1,18 @@
 package heap;
 
+// Problem (LC 973): Given an array of points on a plane, return the k closest
+//          points to the origin (0, 0). Distance = sqrt(x² + y²). Any order.
+// Example: points = [[1,3],[-2,2]], k = 1
+//          Output: [[-2,2]]  (dist² = 8 vs 10 — [-2,2] is closer)
+//          points = [[3,3],[5,-1],[-2,4]], k = 2
+//          Output: [[3,3],[-2,4]]
+// Note: Compare squared distances (x²+y²) to avoid sqrt — same ordering, no float error.
+// Approach 1: Max-Heap of size k (evict farthest when size > k) — O(n log k)
+// Approach 2: QuickSelect — partition so first k elements have smallest dist² — O(n) avg
+// Time: O(n log k) heap / O(n) average QuickSelect. Space: O(k) / O(1)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.PriorityQueue;
 

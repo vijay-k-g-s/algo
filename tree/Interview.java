@@ -1,5 +1,20 @@
 package tree;
 
+// Problem: Binary Tree In-Order Traversal (Left → Root → Right).
+//          For a Binary Search Tree, in-order traversal visits nodes in
+//          ascending sorted order.
+// Example: Tree:       1
+//                    /   \
+//                   2     3
+//                  / \   / \
+//                 4   5 6   7
+//          In-order output: 4 2 5 1 6 3 7
+// Approach: Recursive DFS — recurse left subtree, print root, recurse right.
+//           Base case: node == null → return.
+// Time: O(n), Space: O(h) where h = height of tree (recursion stack)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 class TreeNode {
     int value;
     TreeNode left;

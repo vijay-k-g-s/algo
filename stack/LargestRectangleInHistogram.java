@@ -1,5 +1,23 @@
 package stack;
 
+// Problem (LC 84): Given an array of bar heights in a histogram where each bar
+//          has width 1, find the area of the largest rectangle that fits within
+//          the histogram boundaries.
+// Example: heights = [2, 1, 5, 6, 2, 3]
+//          Output: 10  (bars of height 5 and 6, width = 2)
+//          heights = [2, 4]
+//          Output: 4   (single bar of height 4, width = 1)
+// Approach: Nearest Smaller to Left (NSL) + Nearest Smaller to Right (NSR).
+//   For each bar i treated as the shortest bar in its rectangle:
+//     width = NSR[i] - NSL[i] - 1
+//     area  = heights[i] * width
+//   NSL uses a monotonic increasing stack (scan left→right).
+//   NSR uses a monotonic increasing stack (scan right→left).
+//   Answer = max area across all bars.
+// Time: O(n), Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Stack;
 
 public class LargestRectangleInHistogram {

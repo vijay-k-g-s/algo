@@ -1,5 +1,19 @@
 package heap;
 
+// Problem (LC 347): Given an integer array, return the k most frequently
+//          occurring elements. The answer is guaranteed to be unique. Any order.
+// Example: nums = [1, 1, 1, 2, 2, 3], k = 2
+//          Output: [1, 2]  (1 appears 3×, 2 appears 2×)
+//          nums = [1], k = 1
+//          Output: [1]
+// Approach 1: Min-Heap of size k keyed by frequency.
+//   Build freq map, then maintain heap; evict least-frequent when size > k.
+//   Time: O(n log k), Space: O(n)
+// Approach 2: Bucket Sort — index = frequency (max = n), collect high → low.
+//   Time: O(n), Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

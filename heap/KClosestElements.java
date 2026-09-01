@@ -1,5 +1,18 @@
 package heap;
 
+// Problem (LC 658): Given a sorted integer array, two integers k and x, return
+//          the k closest integers to x in the array, sorted in ascending order.
+//          Closeness: smaller |a - x| wins; equal distance → smaller value wins.
+// Example: arr = [1, 2, 3, 4, 5], k = 4, x = 3
+//          Output: [1, 2, 3, 4]
+//          arr = [1, 3, 6, 10, 15], k = 3, x = 7
+//          Output: [3, 6, 10]  (distances: 4, 1, 3 from x=7)
+// Approach 1: Max-Heap of size k keyed by distance — O(n log k), O(k) space
+// Approach 2: Binary Search on the left boundary of the result window — O(log n + k)
+// Time: O(n log k) heap / O(log n + k) binary search. Space: O(k)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.PriorityQueue;
 

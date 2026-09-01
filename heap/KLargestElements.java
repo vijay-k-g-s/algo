@@ -1,5 +1,19 @@
 package heap;
 
+// Problem: Given an unsorted integer array, return the k largest elements.
+//          Order of elements in the result does not matter.
+// Example: nums = [7, 10, 4, 3, 20, 15], k = 3
+//          Output: [10, 15, 20]
+//          nums = [1, 2, 3, 4, 5], k = 2
+//          Output: [4, 5]
+// Approach 1: Min-Heap of size k — maintain only k largest seen so far.
+//   If current > heap min, add and evict the smallest. Heap top = kth largest.
+//   Time: O(n log k), Space: O(k)
+// Approach 2: QuickSelect — partition so last k elements are the largest.
+//   Time: O(n) average, Space: O(1)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.PriorityQueue;
 

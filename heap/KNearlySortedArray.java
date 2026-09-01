@@ -1,5 +1,20 @@
 package heap;
 
+// Problem: Sort a k-nearly sorted array. Each element is at most k positions
+//          away from its correct sorted position. Return the fully sorted array.
+// Example: nums = [6, 5, 3, 2, 8, 10, 9], k = 3
+//          Output: [2, 3, 5, 6, 8, 9, 10]
+//          nums = [10, 9, 8, 7, 4, 70, 60, 50], k = 4
+//          Output: [4, 7, 8, 9, 10, 50, 60, 70]
+// Approach: Min-Heap of size (k+1).
+//   The globally smallest element must be within the first k+1 elements.
+//   Seed heap with indices 0..k. Then for each new element added, poll the
+//   min (guaranteed correct next element) and push the new one.
+//   Drain remaining heap at the end.
+// Time: O(n log k), Space: O(k)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.PriorityQueue;
 

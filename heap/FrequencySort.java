@@ -1,5 +1,17 @@
 package heap;
 
+// Problem (LC 1636): Sort an array in increasing order based on element frequency.
+//          If two numbers have the same frequency, sort them in decreasing order of value.
+// Example: nums = [1, 1, 2, 2, 2, 3]
+//          Output: [3, 1, 1, 2, 2, 2]  (3 appears once, 1 twice, 2 three times)
+//          nums = [2, 3, 1, 3, 2, 4, 2, 3, 1]
+//          Output: [4, 1, 1, 3, 3, 3, 2, 2, 2]
+// Approach 1: Max-Heap ordered by (frequency desc, value asc) — O(n log n)
+// Approach 2: Bucket Sort — bucket index = frequency, collect high → low — O(n)
+// Time: O(n log n) heap / O(n) bucket. Space: O(n)
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
