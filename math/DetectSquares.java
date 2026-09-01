@@ -39,7 +39,7 @@ public class DetectSquares {
         int total = 0;
 
         Map<Integer, Integer> xMap = xToYCount.getOrDefault(px, new HashMap<>());
-        for (Map.Entry<Integer, Integer> e : xToYCount.entrySet()) {
+        for (Map.Entry<Integer, Map<Integer, Integer>> e : xToYCount.entrySet()) {
             int x2 = e.getKey();
             if (x2 == px) continue;
             Map<Integer, Integer> x2Map = e.getValue();

@@ -15,18 +15,6 @@ package tree;
 //
 // ─────────────────────────────────────────────────────────────────────────────
 
-class TreeNode {
-    int value;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
-    }
-}
-
 public class Interview {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -47,7 +35,7 @@ public class Interview {
         }
         // In-order traversal: left, root, right
         printTree(node.left);
-        System.out.print(node.value + " ");
+        System.out.print(node.val + " ");
         printTree(node.right);
     }
     
