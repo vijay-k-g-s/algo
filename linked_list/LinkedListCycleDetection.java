@@ -1,7 +1,11 @@
 package linked_list;
 
-// LeetCode 141. Linked List Cycle
-//
+// Problem (LC 141): Given the head of a linked list, determine if it contains
+//          a cycle. A cycle exists if some node's next pointer points back to
+//          a previous node in the list.
+// Example: 3 → 2 → 0 → -4 ↩ (tail connects back to node 2) → true
+//          1 → 2 (no back pointer)                           → false
+//          [1] (single node, no cycle)                       → false
 // Approach: Floyd's Cycle Detection — Tortoise and Hare
 //   - slow pointer moves 1 step at a time
 //   - fast pointer moves 2 steps at a time

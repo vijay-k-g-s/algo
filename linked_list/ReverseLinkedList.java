@@ -1,7 +1,9 @@
 package linked_list;
 
-// LeetCode 206. Reverse Linked List
-//
+// Problem (LC 206): Reverse a singly linked list and return the new head.
+// Example: 1 → 2 → 3 → 4 → 5  →  5 → 4 → 3 → 2 → 1
+//          [] (empty)            →  []
+//          [1]                   →  [1]
 // Approach: Iterative with three pointers
 //   - prev: the new next of current node
 //   - curr: node being processed
