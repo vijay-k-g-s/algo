@@ -1,5 +1,33 @@
 # algo
-Java Interview Cheat Sheet — Things to Remember
+Java Interview Cheat Sheet — NeetCode 150 + Algorithm Practice
+
+---
+
+## Package Index (NeetCode 150)
+
+| Package | Problems | Topics |
+|---|---|---|
+| `arrays/` | 8 | Contains Duplicate, Two Sum, Group Anagrams, Product Except Self, Valid Sudoku, Longest Consecutive, Encode/Decode |
+| `twopointers/` | 4 | Valid Palindrome, Two Sum II, 3Sum, Container With Most Water |
+| `slidingwindow/` | 9 | Best Time Stock, Longest Substring, Char Replacement, Permutation in String, Min Window |
+| `stack/` | 12 | Valid Parentheses, Min Stack, Generate Parentheses, Car Fleet, Trapping Rain Water, Histogram |
+| `binarysearch/` | 7 | Binary Search, Search 2D Matrix, Koko Bananas, Find Min Rotated, Median Two Arrays |
+| `linked_list/` | 11 | Reverse, Merge, Reorder, LRU Cache, Cycle Detection, Merge K Lists, Reverse K-Group |
+| `tree/` | 15 | Invert, Max Depth, Diameter, LCA, Level Order, Validate BST, Serialize/Deserialize |
+| `trie/` | 3 | Implement Trie, Add & Search Words, Word Search II |
+| `heap/` | 7 | Kth Largest Stream, K Closest Points, Task Scheduler, Find Median, Design Twitter |
+| `backtracking/` | 10 | Subsets, Combination Sum, Permutations, Word Search, Palindrome Partitioning, N-Queens |
+| `graph/` | 13 | Islands, Clone Graph, Pacific Atlantic, Course Schedule, Word Ladder, Union-Find |
+| `graph/` (advanced) | 6 | Dijkstra, Prim's, Alien Dictionary, Reconstruct Itinerary, Cheapest Flights |
+| `dynamicprogramming/` | 23 | Climbing Stairs, House Robber, Coin Change, LIS, LCS, Edit Distance, Burst Balloons |
+| `greedy/` | 8 | Max Subarray, Jump Game, Gas Station, Hand of Straights, Partition Labels |
+| `interval/` | 6 | Insert, Merge, Non-Overlapping, Meeting Rooms I & II, Min Interval Query |
+| `math/` | 8 | Rotate Image, Spiral Matrix, Happy Number, Pow(x,n), Detect Squares |
+| `bitmanipulation/` | 7 | Single Number, Hamming Weight, Counting Bits, Reverse Bits, Missing Number |
+
+---
+
+## Java Interview Cheat Sheet — Things to Remember
 
 ---
 
